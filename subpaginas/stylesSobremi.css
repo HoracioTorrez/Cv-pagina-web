@@ -1,0 +1,274 @@
+*{
+   margin: 0;   
+}
+body{
+  background-color: rgba(226, 216, 216, 0.397);
+}
+.header{
+  background-color: rgb(90, 89, 89);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  padding: 5px 2%;
+  
+  }
+
+.logo img{  
+  height: 60px;
+  width: auto;
+  padding-left: 0%;
+  transition: all 0.3s;
+  }
+  /*.logo img:hover{
+    transform:scale(1,1.5);
+  }*/
+.logo{
+  cursor: pointer;
+  margin-right: auto;
+}
+  
+.nav-links{
+  list-style: none;
+  
+}
+.nav-links li{
+  display: inline-block;
+  padding: 0 20px;
+  position: relative;
+}
+.nav-links li:hover{
+    transform: scale(1,1);
+}
+.nav-links li a:hover{
+  color: #D4AF37;
+}
+.nav-links li::before{
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: rgb(32, 32, 32);
+  position: absolute;
+  left:auto;
+  bottom: -12px;
+  transition: 0.4s ease-out;
+}
+.nav-links li:hover::before{
+  width: 70%;
+}
+.nav-links a{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 500;
+  color: white;
+  text-decoration: none;
+    
+  }
+ 
+
+
+.button a{
+  text-decoration: none;
+  color: rgb(22, 21, 21);
+  font-size: 20px;
+  }
+            
+.button:hover{
+  animation-name: swing;
+      -webkit-animation-name: swing;
+      -moz-animation-name: swing;
+  animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+}
+
+  @keyframes swing {
+      20% {transform: rotate3d(0, 0, 1, 15deg);}
+      40% {transform: rotate3d(0, 0, 1, -10deg);}
+      60% {transform: rotate3d(0, 0, 1, 5deg);}
+      80% {transform: rotate3d(0, 0, 1, -5deg);}
+      to  {transform: rotate3d(0, 0, 1, 0deg);}
+  }
+  
+   .Encabezado h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+   font-family:'Advent Pro', sans-serif;
+   font-size: 2.441em;
+   line-height: 1.5;
+   z-index:1 ;
+   }
+
+   hr.titulo{
+    display: flex;
+    justify-content: center;
+    height: 3px;
+    width: 20%;
+    margin:auto;  
+    background-color: gray;
+     
+    }
+    #shareButton {
+      text-decoration: none;
+      background: none;
+       border: none;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    #shareBbutton i{
+      border:none;
+      text-decoration: none;
+      color: rgb(22, 21, 21);
+      
+    }
+
+     #socialIcons {
+      visibility: hidden;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content:flex-start;
+      border: none;
+      height: 30px;
+      width: 30px;
+      color:white;
+      line-height: 50px;
+      margin: 25px 8px;
+      cursor: pointer;
+      text-align: center;
+      z-index: 2;
+    }
+    
+    #socialIcons.show {
+      display:flex;
+      justify-content:flex-end;
+      visibility: visible;
+       margin-left: 95%;
+      
+    }
+    
+    #socialIcons a {
+      display: flex;
+      margin-bottom: 5px;  
+     align-items: center;
+      
+    }
+    @media (max-width: 600px) {
+      #socialIcons {
+        justify-content: center;
+      }
+    }
+    #socialIcons a img {
+    border: none;
+    padding-inline: 10px;
+    }
+    
+  
+    #socialIcons a:hover
+  {
+    animation-name: swing;
+        -webkit-animation-name: swing;
+        -moz-animation-name: swing;
+    animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        
+  }
+  
+    @keyframes swing {
+        20% {transform: rotate3d(0, 0, 1, 15deg);}
+        40% {transform: rotate3d(0, 0, 1, -10deg);}
+        60% {transform: rotate3d(0, 0, 1, 5deg);}
+        80% {transform: rotate3d(0, 0, 1, -5deg);}
+        to  {transform: rotate3d(0, 0, 1, 0deg);}
+    }
+  .caja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;  
+     
+    }
+  .box{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    width: 15cm;
+    height: 15cm;
+    background-color:rgba(87, 152, 196, 0.342);
+    place-content: center;
+    position: relative;
+    border-radius: 10%;
+  }
+  .box:before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../imagenes/foto\ linkedin\ byn\ recortada.jpeg);
+    background-size: cover;
+    transition: 0.7s;
+    border-radius: 10%;
+    
+    
+  }
+  .box:hover:before{
+   
+        transform: translateX(-83%) scale(45%);
+        height: 15cm;
+        width: 15cm;
+  }
+  .box p {
+    font-weight: 500;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+    font-family:'Roboto Condensed',sans-serif;
+    text-align: justify;
+    font-size: 1.1em;
+  }
+
+  footer{
+    margin-top: 7%;
+    height: 0.1em;
+    width: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+    flex-direction:row;
+  }
+   footer p {
+    font-size: smaller;
+    color: white;
+   }  
+ 
+ 
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: transparent aqua;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: black;
+    border: 2px solid rgb(90, 89, 89) ;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}
